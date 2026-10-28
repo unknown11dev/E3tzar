@@ -52,7 +52,7 @@ document.getElementById("unlock").addEventListener("submit",e=>{
 const memoryRoot=document.getElementById("memories");
 for(let i=1;i<=15;i++){const card=document.createElement("div");card.className="memory";const img=document.createElement("img");const filename=`memory-${String(i).padStart(2,"0")}.jpeg`;
  img.src=`./assets/memories/${filename}`;
- img.onerror=()=>{ if(!img.dataset.fallback){img.dataset.fallback="1";img.src=`./yelina_apology_site/assets/memories/${filename}`;} else {img.alt=`Image ${i} did not load — check that assets/memories/${filename} was uploaded`;}};img.alt=`Memory screenshot ${i}`;img.loading="lazy";const cap=document.createElement("small");cap.textContent=`Memory ${i} ♡`;card.append(img,cap);memoryRoot.append(card);}
+ img.onerror=()=>{ if(!img.dataset.fallback){img.dataset.fallback="1";img.src=`./${filename}`;} else {img.alt=`Image ${i} did not load — check that assets/memories/${filename} was uploaded`;}};img.alt=`Memory screenshot ${i}`;img.loading="lazy";const cap=document.createElement("small");cap.textContent=`Memory ${i} ♡`;card.append(img,cap);memoryRoot.append(card);}
 document.getElementById("replyForm").addEventListener("submit",async e=>{
  e.preventDefault();const status=document.getElementById("sendStatus"),btn=document.getElementById("sendBtn");
  if(!db){status.textContent="Message sending isn’t connected yet. Follow SETUP.txt to connect the private inbox.";return;}
