@@ -39,8 +39,8 @@ footer{text-align:center;color:#b99bab;font:13px Arial,sans-serif;margin-top:28p
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 /* SETUP: replace these two placeholders with your Supabase project URL and anon/public key. */
-const SUPABASE_URL = "PASTE_SUPABASE_PROJECT_URL_HERE";
-const SUPABASE_ANON_KEY = "PASTE_SUPABASE_ANON_KEY_HERE";
+const SUPABASE_URL = "https://ioshqcomtsjfdetpugbd.supabase.co";
+const SUPABASE_ANON_KEY = "حط_المفتاح_اللي_بعته_هنا";
 const configured = SUPABASE_URL.startsWith("https://") && !SUPABASE_URL.includes("PASTE_") && !SUPABASE_ANON_KEY.includes("PASTE_");
 const db = configured ? window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY) : null;
 const PASS = "1/7/2026";
